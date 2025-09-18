@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ftp-tools/static/css/main.f855e6bc.css",
+    "main.js": "/ftp-tools/static/js/main.9b2f45a6.js",
+    "static/js/453.ef17f637.chunk.js": "/ftp-tools/static/js/453.ef17f637.chunk.js",
+    "index.html": "/ftp-tools/index.html",
+    "main.f855e6bc.css.map": "/ftp-tools/static/css/main.f855e6bc.css.map",
+    "main.9b2f45a6.js.map": "/ftp-tools/static/js/main.9b2f45a6.js.map",
+    "453.ef17f637.chunk.js.map": "/ftp-tools/static/js/453.ef17f637.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.9b2f45a6.js"
+  ]
+}
