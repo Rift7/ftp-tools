@@ -1,6 +1,6 @@
 # FTP Tools
 
-[View the live application](https://<your-username>.github.io/<your-repository-name>)
+[View the live application](https://Rift7.github.io/ftp-tools)
 
 A simple, single-file React tool with Tailwind styling for FTP command reference and calculators.
 
