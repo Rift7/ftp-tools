@@ -11,7 +11,7 @@ const PortBuilder: React.FC = () => {
   const [eprtCmd, setEprtCmd] = useState('EPRT |1|192.168.1.50|52163|');
   const [tupleLine, setTupleLine] = useState('');
   const [isValid, setIsValid] = useState(false);
-  const [isValidIP, setIsValidIP] = useState(false);
+  const [isValidIPState, setIsValidIPState] = useState(false);
   const [isValidPort, setIsValidPort] = useState(false);
   const [ipType, setIpType] = useState<'ipv4' | 'ipv6' | null>(null);
   
@@ -24,7 +24,7 @@ const PortBuilder: React.FC = () => {
     const portValid = portNum >= 1 && portNum <= 65535;
     const ok = ipInfo.valid && portValid;
 
-    setIsValidIP(ipInfo.valid);
+    setIsValidIPState(ipInfo.valid);
     setIsValidPort(portValid);
     setIsValid(ok);
     setIpType(ipInfo.type);
@@ -95,7 +95,7 @@ const PortBuilder: React.FC = () => {
           <div className="grid-item">
             <div className="row" style={{ alignItems: 'baseline' }}>
               <label style={{ flex: 1 }}>Your IP address (IPv4/IPv6)</label>
-              {ip && <StatusIndicator isValid={isValidIP} size="small" />}
+              {ip && <StatusIndicator isValid={isValidIPState} size="small" />}
               {ipType && (
                 <span className="tag" style={{ fontSize: '0.6rem', padding: '2px 6px' }}>
                   {ipType.toUpperCase()}
