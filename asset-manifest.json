@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ftp-tools/static/css/main.9c8e984c.css",
-    "main.js": "/ftp-tools/static/js/main.f92eddc4.js",
+    "main.js": "/ftp-tools/static/js/main.b9994d6f.js",
     "index.html": "/ftp-tools/index.html",
     "main.9c8e984c.css.map": "/ftp-tools/static/css/main.9c8e984c.css.map",
-    "main.f92eddc4.js.map": "/ftp-tools/static/js/main.f92eddc4.js.map"
+    "main.b9994d6f.js.map": "/ftp-tools/static/js/main.b9994d6f.js.map"
   },
   "entrypoints": [
     "static/css/main.9c8e984c.css",
-    "static/js/main.f92eddc4.js"
+    "static/js/main.b9994d6f.js"
   ]
 }
