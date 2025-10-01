@@ -3,6 +3,9 @@ import PortBuilder from './components/PortBuilder';
 import PasvParser from './components/PasvParser';
 import ReversePortParser from './components/ReversePortParser';
 import CommandReference from './components/CommandReference';
+import FtpResponseCodes from './components/FtpResponseCodes';
+import FirewallRuleGenerator from './components/FirewallRuleGenerator';
+import FtpUrlBuilder from './components/FtpUrlBuilder';
 import Tips from './components/Tips';
 
 const App: React.FC = () => {
@@ -21,6 +24,9 @@ const App: React.FC = () => {
       <PasvParser />
       <ReversePortParser />
       <CommandReference />
+      <FtpResponseCodes />
+      <FirewallRuleGenerator />
+      <FtpUrlBuilder />
       <Tips />
 
       <footer className="small muted">

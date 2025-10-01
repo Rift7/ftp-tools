@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { copyText } from '../utils';
+import { useCopyFeedback } from '../hooks/useCopyFeedback';
 
 interface Command {
   label: string;
@@ -33,6 +33,7 @@ interface CommandRowProps {
 
 const CommandRow: React.FC<CommandRowProps> = ({ command }) => {
   const [args, setArgs] = useState('');
+  const { copyWithFeedback, isCopied } = useCopyFeedback();
 
   const renderCommand = () => {
     return command.template.includes('{args}') 
@@ -42,7 +43,7 @@ const CommandRow: React.FC<CommandRowProps> = ({ command }) => {
 
   const handleCopy = () => {
     const commandText = renderCommand().replace('{args}', '');
-    copyText(commandText);
+    copyWithFeedback(commandText, `cmd-${command.label}`);
   };
 
   return (
@@ -61,8 +62,12 @@ const CommandRow: React.FC<CommandRowProps> = ({ command }) => {
             placeholder="args (e.g., alice)"
           />
         )}
-        <button className="btn" onClick={handleCopy}>
-          Copy
+        <button 
+          className="btn" 
+          onClick={handleCopy}
+          style={{ backgroundColor: isCopied(`cmd-${command.label}`) ? '#10b981' : undefined }}
+        >
+          {isCopied(`cmd-${command.label}`) ? '✓' : 'Copy'}
         </button>
       </div>
     </div>

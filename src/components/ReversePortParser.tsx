@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { parseTuple } from '../utils';
+import StatusIndicator from './StatusIndicator';
 
 const ReversePortParser: React.FC = () => {
   const [portTupleInput, setPortTupleInput] = useState('');
@@ -10,12 +11,30 @@ const ReversePortParser: React.FC = () => {
     setParsed(result);
   }, [portTupleInput]);
 
+  const handleClear = () => {
+    setPortTupleInput('');
+  };
+
   return (
     <section>
-      <h2>Reverse PORT tuple parser</h2>
+      <div className="row" style={{ marginBottom: '6px', alignItems: 'baseline' }}>
+        <h2>Reverse PORT tuple parser</h2>
+        <div style={{ marginLeft: 'auto' }}>
+          <button 
+            className="btn" 
+            onClick={handleClear}
+            style={{ fontSize: '0.8rem', padding: '6px 12px' }}
+          >
+            Clear
+          </button>
+        </div>
+      </div>
       <div className="card grid grid-2">
         <div>
-          <label>Paste a PORT line or tuple</label>
+          <div className="row" style={{ alignItems: 'baseline' }}>
+            <label style={{ flex: 1 }}>Paste a PORT line or tuple</label>
+            {portTupleInput && <StatusIndicator isValid={!!parsed} size="small" />}
+          </div>
           <input
             value={portTupleInput}
             onChange={(e) => setPortTupleInput(e.target.value)}
