@@ -2,7 +2,7 @@
 
 [View the live application](https://Rift7.github.io/ftp-tools)
 
-A simple, single-file React tool with Tailwind styling for FTP command reference and calculators.
+A simple, React app for FTP command reference and calculators.
 
 ## Features
 
